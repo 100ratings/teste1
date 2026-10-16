@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Notas" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Notas</title>
+</head>
+<body>
+  <main class="phone-shell" aria-label="Nota">
+    <header class="status-bar" aria-label="Barra de status">
+      <time id="clock">19:17</time>
+      <div class="status-icons" aria-hidden="true">
+        <span class="signal"><i></i><i></i><i></i><i></i></span>
+        <span class="wifi"><b></b></span>
+        <span class="battery"><em>37</em></span>
+      </div>
+    </header>
+
+    <section class="top-controls" aria-label="Controles da nota">
+      <button class="round-button back" aria-label="Voltar"><span></span></button>
+      <div class="top-right">
+        <button class="round-button undo" aria-label="Desfazer"><span>↶</span></button>
+        <button class="share-menu" aria-label="Compartilhar e mais opções">
+          <span class="share-icon"></span><span class="dots">•••</span>
+        </button>
+        <button class="round-button done" aria-label="Concluir"><span>✓</span></button>
+      </div>
+    </section>
+
+    <article id="note" class="note" contenteditable="true" spellcheck="false" aria-label="Conteúdo da nota"></article>
+
+    <nav class="bottom-toolbar" aria-label="Ferramentas da nota">
+      <button aria-label="Formatação" class="tool-format">Aa</button>
+      <button aria-label="Checklist" class="tool-checklist"><span>✓</span><i></i><b>○</b><i></i></button>
+      <button aria-label="Tabela" class="tool-table"><i></i><i></i><i></i><i></i></button>
+      <button aria-label="Anexo" class="tool-clip"></button>
+      <button aria-label="Desenho" class="tool-pen">△</button>
+      <button aria-label="Mais opções" class="tool-more">…</button>
+    </nav>
+
+    <button class="floating-compose" aria-label="Nova nota">⌑</button>
+    <div class="home-indicator" aria-hidden="true"></div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
